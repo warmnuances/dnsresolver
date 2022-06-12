@@ -1,0 +1,99 @@
+
+
+
+
+
+
+    // Byte stream[1024];
+    // int streamLen;
+
+    // streamLen = read(clientSockfd, stream ,1024);
+    // if (streamLen < 0) {
+    //   perror("ERROR reading from socket");
+    // }
+    // stream[streamLen] = '\0';
+
+    // int index = 0; 
+
+    
+    // DNSRequest* request = serializeRequest(stream);
+
+    // int isValidRequest = logRequest(request);
+
+
+    // if(isValidRequest){
+    //   sendToUpstreamServer(request, upstreamfd);
+    //   // //Connecting to upstream server
+    //   DNSResponse *response =  handleResponse(upstreamfd);
+    //   logResponse(response);
+
+    //   sendPacketToClient(clientSockfd, response);
+
+
+    // }
+    // else{
+    //   handleInvalidRequest(clientSockfd,request);
+    // }
+
+
+
+
+    // while(index < streamLen){
+    //   //Read first 2 bytes
+    //   Byte lenBuf[2];
+    //   memcpy(lenBuf, stream + index,  2);
+    //   index+=2;
+
+    //   // Read Length
+    //   int length = hexToDec(lenBuf);
+
+
+    //   Byte* packet = (Byte*)calloc(length + 2,sizeof(Byte)+ 1);
+
+    //   for(int i=0 ; i < 2; i ++){
+    //     packet[0] = lenBuf[0];
+    //     packet[1] = lenBuf[1];
+    //   }
+  
+    //   for(int k = 0; k < index + length; k++){
+    //     packet[k+2] = stream[index + k];
+    //   }
+
+
+    //   index += length;
+    //   packet[index]  = '\0';
+
+    //   DNSRequest* request = serializeRequest(packet);
+
+    //   int isValidRequest = logRequest(request);
+
+    //   if(isValidRequest){
+    //     // //Connecting to upstream server
+    //     // sendToUpstreamServer(request, upstreamfd);
+    //     int n;
+    //   	n = write(upstreamfd,stream, streamLen);
+    //     if (n < 0) {
+    //       perror("socket");
+    //     }
+
+
+
+
+    //     DNSResponse *response =  handleResponse(upstreamfd);
+    //     logResponse(response);
+
+
+    //     // sendPacketToClient(clientSockfd, response);
+
+    
+
+    //   }
+    //   else{
+    //     handleInvalidRequest(clientSockfd,request);
+    //   }
+
+
+    //   fflush(stdout);
+    // }
+
+

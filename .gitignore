@@ -1,0 +1,10 @@
+# Add more...
+*.gch
+phase1
+phase1.exe
+vgcore.*
+.vscode
+*.o
+*.log
+client
+dns_svr
