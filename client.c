@@ -64,9 +64,7 @@ ByteStream* readFile(){
   bs->stream = bytes;
   bs->length = filelen;
 
-
   fclose(fileptr); // Close the file
-
 
   return bs;
 
@@ -118,8 +116,6 @@ int main(int argc, char** argv) {
 	}
 	freeaddrinfo(servinfo);
 
-
-
 	printf("Length: %d \nReq ", bs->length);
 	for(int i =0 ; i< bs->length ; i++){
 		printf("%d ", bs->stream[i]);
@@ -147,12 +143,6 @@ int main(int argc, char** argv) {
 		exit(EXIT_FAILURE);
 	}
 
-
-
-
-
-
-
 	unsigned char wbuffer[1024];
 
 	//Get the request back
@@ -172,13 +162,9 @@ int main(int argc, char** argv) {
 		printf("%d ", wbuffer[i]);
 	}
 
-
-
 	fflush(stdin);
 	fflush(stdout);
 
 	close(sockfd);
-
-
 	return 0;
 }
